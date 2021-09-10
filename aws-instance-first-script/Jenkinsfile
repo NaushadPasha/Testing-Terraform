@@ -7,7 +7,7 @@ pipeline {
       
          stage('git checkout'){
         steps{
-               git 'https://github.com/NaushadPasha/demo.git'
+               git 'https://github.com/NaushadPasha/nshd-learning.git'
              }
         }
      stage('Terraform Init'){
