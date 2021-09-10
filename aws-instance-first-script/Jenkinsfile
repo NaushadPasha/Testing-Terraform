@@ -20,7 +20,8 @@ terraform init'''
 stage('Terraform apply'){
         steps{
            sh '''cd /home/ubuntu/adastra-test1
-terraform apply  --auto-approve -lock=false''' 
+/*terraform apply  --auto-approve -lock=false''' */
+                   echo "The Script is running, Please update the pipeline to provision servers"
              }
         }
 
