@@ -19,8 +19,8 @@ terraform init'''
 
 stage('Terraform apply'){
         steps{
-           sh '''cd /home/ubuntu/adastra-test1'''
-# terraform apply  --auto-approve -lock=false''' 
+           sh '''cd /home/ubuntu/adastra-test1
+ terraform apply  --auto-approve -lock=false''' 
                     
              }
         }
