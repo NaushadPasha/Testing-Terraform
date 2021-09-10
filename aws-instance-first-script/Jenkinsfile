@@ -25,7 +25,7 @@ pipeline {
                         dir("terraform")
                         {
                          
-                            git "https://github.com/NaushadPasha/adastra-internal.git"
+                            git "https://github.com/NaushadPasha/nshd-learning.git"
                         }
                     }
                 }
