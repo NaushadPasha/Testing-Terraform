@@ -9,7 +9,7 @@ resource "aws_instance" "IP_example" {
   instance_type = var.instance_type
   subnet_id     = aws_subnet.public_1.id
 
-  # Security group assign to instance
+  # Security group assign to instance.
   vpc_security_group_ids = [aws_security_group.allow_ssh.id]
   private_ip = "10.0.1.10"
   # key name
