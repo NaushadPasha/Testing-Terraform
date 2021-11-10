@@ -1,27 +1,17 @@
 pipeline {
-           
+           agent  any
+               tools {
+  terraform 'Terraform-v1'
+  }
   stages{
-      
-         stage('git checkout'){
-        steps{
-               git 'https://github.com/NaushadPasha/Testing-Terraform.git'
-             }
-        }
-     stage('Terraform Init'){
-        steps{
-           sh '''cd /home/ubuntu/
-terraform init'''
-             }
-        }
+     
 
-stage('Terraform apply'){
+stage('Terraform Init'){
         steps{
-           sh '''cd /home/ubuntu/
- terraform apply  --auto-approve -lock=false''' 
-                    
+           sh label: '',script: 'terraform apply --auto-approve'
              }
         }
 
  } 
 
-}  
+}     
