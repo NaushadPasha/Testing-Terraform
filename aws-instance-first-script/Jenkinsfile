@@ -7,19 +7,19 @@ pipeline {
       
          stage('git checkout'){
         steps{
-               git 'https://github.com/NaushadPasha/nshd-learning.git'
+               git 'https://github.com/NaushadPasha/Testing-Terraform.git'
              }
         }
      stage('Terraform Init'){
         steps{
-           sh '''cd /home/ubuntu/adastra-test1
+           sh '''cd /home/ubuntu/
 terraform init'''
              }
         }
 
 stage('Terraform apply'){
         steps{
-           sh '''cd /home/ubuntu/adastra-test1
+           sh '''cd /home/ubuntu/
  terraform apply  --auto-approve -lock=false''' 
                     
              }
