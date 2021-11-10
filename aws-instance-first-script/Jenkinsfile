@@ -4,6 +4,7 @@ pipeline {
     parameters {
         string(name: 'environment', defaultValue: 'terraform', description: 'Workspace/environment file to use for deployment')
         booleanParam(name: 'autoApprove', defaultValue: false, description: 'Automatically run apply after generating plan?')
+        string(name: 'Action', defaultValue: 'apply', description: 'Action/Apply create or destroy resources')
 
     }
 
@@ -54,7 +55,7 @@ pipeline {
 
         stage('Apply') {
             steps {
-                sh "pwd;cd terraform/aws-instance-first-script ; $(terraform_action) -input=false tfplan"
+                sh "pwd;cd terraform/aws-instance-first-script ; terraform $(Action) -input=false tfplan"
             }
         }
     }
